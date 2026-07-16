@@ -1,0 +1,43 @@
+MICRM-v0.2 full-draft delivery verification
+
+Review target
+-------------
+Draft filename: MICRM-v0.2-full-draft-0db60d0a.md
+Draft SHA-256: 0db60d0a240361d410ac2370a040fbadf284a203d9b7b22e19f7cc795897f62f
+Lines: 1130
+Bytes: 78496
+Active [UNSURE ABOUT THIS: ...] markers: 0
+Declared [ASSUME: ...] clauses: 2
+
+Source states
+-------------
+Canonical MICRM-v0.md SHA-256:
+00610b75c16f226d7b9e9f2c432308bedd48928d4a3dc902b47b8b26af920542
+
+Prior reviewer-ratified v0.2 review state SHA-256:
+a493d4793431cd31b0772a05a60e2856f1af055e464f43ab216eb4ab67dc988b
+
+Required reconstruction checks
+------------------------------
+1. Apply MICRM-v0-to-v0.2-full-draft.diff to canonical MICRM-v0.md.
+   The result must hash to 0db60d0a240361d410ac2370a040fbadf284a203d9b7b22e19f7cc795897f62f.
+
+2. Apply MICRM-a493d479-to-v0.2-full-draft.diff to the a493d479 review state.
+   The result must hash to 0db60d0a240361d410ac2370a040fbadf284a203d9b7b22e19f7cc795897f62f.
+
+Both reconstruction checks passed before packaging and produced byte-identical copies of the delivered draft.
+
+Resolved uncertainty surface
+----------------------------
+1. Incident-complete alleged-contribution type record.
+2. Accountability-sensitive admission representation rule and resolution fork.
+3. Distributed contribution mechanism and structural channel-composition test.
+4. Operative causal capacity definition with five-substrate examples.
+5. Event-level and distribution-level nondeterministic counterfactual evidence modes.
+6. Overlay incentive audit that does not alter the MICRM core bound set.
+
+Status
+------
+This is a non-canonical full review draft. The prior reviewer ratification of a493d479 does not extend to these substantive changes. MICRM-v0 remains canonical. The prior status-only canonicalization patch and candidate derived from a493d479 are obsolete for this full draft.
+
+Reject this package if the draft hash, manifest verification, or either reconstruction check fails.

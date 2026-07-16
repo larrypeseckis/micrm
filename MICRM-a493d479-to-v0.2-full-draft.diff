@@ -1,0 +1,424 @@
+--- MICRM-v0.2-review-state-a493d479.md
++++ MICRM-v0.2-full-draft.md
+@@ -1,11 +1,11 @@
+-# MICRM-v0.2-draft: Machine-Initiated Consequence Reference Model
++# MICRM-v0.2-full-draft: Machine-Initiated Consequence Reference Model
+ 
+ *Author: Larry Peseckis | larrypeseckis.ai*  
+-*Version: v0.2 review draft | Dated: 2026-07-15*  
+-*Status: Non-canonical working draft. Not for distribution.*  
++*Version: v0.2 full review draft | Dated: 2026-07-16*  
++*Status: Non-canonical full draft. Not for distribution.*  
+ *Canonical predecessor: MICRM-v0, file dated 2026-07-11; witnessed repository timestamp 2026-07-12.*
+ 
+-> **Draft-control notice:** MICRM-v0 remains the canonical model. This document has no canonical effect unless Larry Peseckis ratifies the integrated text and commits the ratified version to the MICRM repository. The architecture below integrates the joint-accountability work ratified in dialogue through 2026-07-15. Wording remains subject to full-document review.
++> **Draft-control notice:** MICRM-v0 remains the canonical model. This document has no canonical effect unless Larry Peseckis ratifies the integrated text and commits the ratified version to the MICRM repository. This full draft is derived from reviewer-ratified review state SHA-256 `a493d4793431cd31b0772a05a60e2856f1af055e464f43ab216eb4ab67dc988b` and resolves every explicit uncertainty marker present in that state. The resolutions are substantive changes, so the prior reviewer ratification does not extend to these bytes. The two remaining scope-assumption clauses are declared assumptions, not unresolved architecture. Wording remains subject to renewed full-document review.
+ 
+ ---
+ 
+@@ -122,17 +122,46 @@
+ 
+ ### 4.10 Alleged contribution class
+ 
+-The typed contribution being evaluated. At minimum, the type record identifies:
++The alleged contribution class is the incident-relative type against which channel, state, transition, and path capacities are evaluated.
+ 
+-- operation or effect;
+-- target or receiving interface;
+-- authority or provenance requirement;
+-- magnitude, value, energy, scale, or resource demand where relevant;
+-- timing, order, multiplicity, or persistence where relevant;
+-- required combination conditions;
+-- and the selected consequence class.
++```text
++alleged contribution class:
++  identifier:
++  class-selection authority or record:
++  operation or effect:
++  carrier or representation:
++  receiving interface:
++  target:
++  required authority:
++  required provenance:
++  quantitative bound:
++  temporal relation:
++  multiplicity and persistence:
++  required combination conditions:
++  composition locus or ordered subgraph:
++  composition rule or operator:
++  selected consequence class:
++```
++
++Each field is recorded as one of:
++
++- a concrete value, set, relation, or range;
++- not applicable (`⊥`), with independently supported structural evidence where non-applicability bears on exit;
++- or unresolved (`?`).
++
++The type record is **incident-complete** when every field required to distinguish capacity present from capacity excluded for the claimed exit is resolved or independently supported as not applicable. Incident completeness is not a claim that MICRM provides a universal ontology of every possible machine effect.
++
++A channel, state, transition, or path has **type-compatible capacity** when independently supported structural evidence establishes that it can satisfy every required dimension under the actual receiving-interface semantics and incident state. Categorical dimensions are evaluated by membership or inclusion; authority and provenance by satisfaction of the required predicate; quantitative dimensions by the recorded threshold or range; temporal, multiplicity, and persistence dimensions by the recorded relation; and combination conditions under the structural channel-composition test in Section 7.2.
++
++The alleged contribution class and its field resolutions are part of the accountability record. An interested root's unilateral type declaration cannot by itself establish exit. If two evidence-compatible class definitions would produce different attachment, propagation, cut, exclusion, or dark-surface results, class selection is unresolved and cannot support exit.
++
++If a required field or compatibility relation is unresolved, type compatibility is unresolved and cannot support exit.
++
++### 4.11 Distributed contribution mechanism
+ 
+-[UNSURE ABOUT THIS: The minimum contribution-type fields require worked examples across all MICRM substrates before they are safe as a complete formal type system.]
++A distributed contribution mechanism is a finite indexed collection of two or more contribution-bearing states or capacities that are individually insufficient to satisfy the alleged contribution class but become type-compatible through an identified composition locus or ordered composition subgraph on ancestor paths to the selected consequence. Indexed collection is used rather than mathematical set so that repeated states, duplicate messages, quorum members, and multiplicity remain representable.
++
++A composition locus may be a traversal layer, control, software or physical interface, policy rule, institutional decision function, or physical coupling. Mere co-presence, common ancestry, or theoretical combinability is insufficient. Each component remains attributed to the root or roots whose traversals originated, transformed, selected, authorized, represented, or controlled it. Structural composition is evaluated under Section 7.2, and faithful carriage alone does not attach a transport-only root.
+ 
+ ---
+ 
+@@ -182,7 +211,28 @@
+ 
+ Promote an admission decision to its own traversal when the machine-initiated decision independently changes state, authority, routing, or availability in a manner relevant to incident reconstruction. An accept, reject, quarantine, release, route, or transform decision may therefore have its own Intent, Context, Action Selection, Gate, Actuation, Consequence, evidence spine, and bonded root.
+ 
+-[UNSURE ABOUT THIS: The promotion threshold remains incident-relative. A later version should define a graph-resolution rule for borderline cases. Until then, an uncertain failure to promote is disclosed as a run-graph resolution dependency.]
++#### Accountability-sensitive graph-resolution rule
++
++For a borderline admission mechanism, evaluate both local representations:
++
++1. the mechanism embedded as a Context-boundary control; and
++2. the mechanism promoted to a separate traversal.
++
++The two representations are **accountability-equivalent** only when independently supported structural evidence establishes that the choice does not change any of the following at the selected incident resolution:
++
++- bonded-root assignment;
++- candidate-root membership;
++- ancestor-path count or topology;
++- attachment or propagation findings;
++- availability of a qualifying propagation cut or structural exclusion;
++- evidence custody, independence, or residual-dark-surface bounds;
++- or the identity of the selected consequence.
++
++If accountability equivalence is established, the simpler embedded representation is permitted. If inequivalence is established and independently supported evidence establishes a separately committed admission result, the mechanism is promoted to its own traversal.
++
++If accountability equivalence or the separately committed result cannot be established or excluded, the record retains both evidence-compatible representations as an **admission-resolution fork**. The first invariant, candidate sets, and exits are evaluated separately under each evidence-compatible representation. A root exits only if it establishes exit in every evidence-compatible representation in which it is a candidate. The fork does not prove that a separate traversal occurred, and uncertainty about the representation cannot support exit.
++
++The resolution decision or fork, compared representations, and supporting evidence are recorded in the run graph or seam record. Promotion preserves an accountable decision boundary. It does not by itself establish attachment or contribution.
+ 
+ ### 5.4 Fused selection and authorization
+ 
+@@ -286,7 +336,32 @@
+ | Capacity present | A channel or composable set can carry the alleged contribution class | Exit fails |
+ | Capacity unresolved | Relevant capacity cannot be established or excluded | Exit fails by burden; contribution is not thereby proven |
+ 
+-[UNSURE ABOUT THIS: "Structurally composable set of channels" requires later formal treatment with the distributed-mechanism definition. It remains in v0.2 so that multiple individually insufficient channels are not incorrectly treated as jointly incapable.]
++Individual insufficiency does not establish set insufficiency. Channel-set composition is evaluated under the following rule.
++
++### 7.2 Structural channel-composition test
++
++Let `C = (c1, ..., cn)` be a finite indexed collection of channels or channel-borne states, let `m` be a proposed composition locus or ordered composition subgraph, and let `κ` be the alleged contribution class. The indexing preserves order and multiplicity where either is consequence-relevant.
++
++`C` is **structurally composable for `κ` at `m`** only when independently supported structural evidence establishes all of the following:
++
++1. **Path continuity:** every required channel or state reaches `m` on the incident graph without a qualifying cut, structural exclusion, or neutralization that removes its required capacity before composition.
++2. **Association:** the states can be associated to the required subject, target, transaction, session, device, case, or other incident identity.
++3. **Temporal compatibility:** ordering, concurrency, expiry, persistence, and multiplicity permit the states to coexist or be consumed in the required sequence.
++4. **Composition semantics:** the actual interface, control, policy, physical coupling, or decision function at `m` accepts and combines the states in the alleged manner.
++5. **Type composition:** the mechanism-specific partial operator `⊕m` applied to the input capacity profiles yields a capacity type-compatible with `κ` under Section 4.10.
++6. **Consequence reach:** `m` lies on an ancestor path to the selected consequence.
++
++MICRM does not define a universal composition operator. `⊕m` is partial and mechanism-specific. It may combine, for example, data with authority, a command with an enable state, two control signals, an instruction with tool access, or a factual representation with an institutional decision rule.
++
++The test has three findings:
++
++| Finding | Exact factual claim | Exit effect |
++|---|---|---|
++| Composition present | The identified states have an enabled composition relation through `m` that yields the alleged contribution class | Capacity is present for that proposed composition; the applicable attachment, propagation, cut, and exclusion rules continue |
++| Composition excluded | At least one required path, association, temporal, semantic, type, or consequence-reach condition is structurally impossible | That proposed composition does not block exit |
++| Composition unresolved | A required condition or the relevant composition semantics cannot be established or excluded | Capacity exclusion is not established; exit fails by burden |
++
++For a residual dark surface, every finite indexed collection admitted by the bound must be evaluated. A collection blocks exit when composition is present or unresolved. Capacity exclusion is established only when every admitted collection is excluded. The rule does not require total observability; it requires resolution only of the specific composition pathways relevant to the alleged contribution class.
+ 
+ ---
+ 
+@@ -494,7 +569,28 @@
+ 
+ A contribution-bearing state may be a complete mechanism, a defect, a false authority representation, a physical property, or one component of a distributed mechanism.
+ 
+-[UNSURE ABOUT THIS: "Operative causal capacity" requires worked examples for AI-agentic, IT/cloud, OT, cyber-physical, and institutional substrates before it is safe as a fully formal term. It must not be interpreted as a generalized but-for test that binds every carrier or contextual input.]
++**Operative causal capacity** is the incident-specific capability of a state or transition to enable, disable, authorize, parameterize, redirect, amplify, suppress, or otherwise alter a consequence-relevant transition through a directed, uncut, type-compatible mechanism leading to the selected consequence.
++
++Operative causal capacity is established only when independently supported structural evidence identifies all of the following at the incident resolution:
++
++1. the state or transition was present or enabled during the relevant interval;
++2. the receiving interface could interpret, consume, or physically respond to it;
++3. required authority, provenance, target reach, and interface access were available;
++4. quantitative, temporal, multiplicity, and persistence conditions were satisfied;
++5. an identified mechanism or structural composition relation connected it to a consequence-relevant transition; and
++6. the required capacity was not removed or neutralized before it could operate on that path.
++
++Operative causal capacity is a property of a state or transition relative to an incident mechanism. It does not attach every root through which the state passed. Root attachment remains governed by Section 4.5. A passive carrier, background utility, or contextual condition is not bound merely because it is a but-for precondition of the run.
++
++#### Cross-substrate examples
++
++| Substrate | Contribution-bearing state and operative-capacity finding |
++|---|---|
++| AI / agentic | An injection-bearing instruction is admitted into Context, is interpretable by the model, and can alter Action Selection while the agent retains tool authority. The instruction and tool authority may form a distributed mechanism at the model-to-tool decision locus. |
++| IT / cloud | A credential token reaches an IAM API before expiry, carries the role required to modify policy, and is accepted by the target interface. The token has operative capacity for the policy-write contribution class; an unchanged packet relay does not attach solely for transporting it. |
++| OT / industrial control | A setpoint frame reaches a PLC register while the controller is in the accepting mode, carries the required write authority, and specifies a value and duration capable of crossing the selected process threshold. |
++| Cyber-physical / robotic | A signed route-override command reaches a flight controller, satisfies the controller's command interface and authority check, and can parameterize physical motion into the selected restricted region. |
++| Institutional / legal / financial | A false income or identity representation enters an eligibility or credit rule as an accepted provenance-bearing field and can change the rule transition that produces the selected denial, approval, or pricing consequence. |
+ 
+ ### 10.4 Three-tier consequence-relevant transformation test
+ 
+@@ -560,16 +656,77 @@
+ 
+ ### 10.6 Counterfactual control-visibility rule
+ 
+-Actual-run evidence may establish that a consequence-relevant control did not receive, inspect, or interpret a state. A finding that a transformation changed control visibility in a consequence-relevant way additionally requires either:
++Actual-run evidence may establish that a consequence-relevant control did not receive, inspect, or interpret a state. A finding that a transformation changed control visibility for the selected event requires an event-level counterfactual result under Section 10.7.
++
++Where an exit claim depends on proving that the specific selected action would have been blocked, modified, delayed, escalated, or permitted differently, a distribution-level finding is insufficient. It does not establish the outcome of the unobserved incident event.
++
++Where the counterfactual cannot be executed or structurally bounded under Section 10.7, the effect remains unresolved and the exit condition is not established.
+ 
+-- independently reproducible replay; or
+-- an independently supported evaluation of the control's recorded policy and configuration
++### 10.7 Nondeterministic control-counterfactual standard
+ 
+-that establishes a different consequence-relevant control outcome under conditions equivalent at the incident-relevant resolution.
++Counterfactual evaluation uses the strongest mode supported by independently controlled evidence.
+ 
+-Where an exit claim depends on resolving that control-visibility effect, and the counterfactual cannot be executed or structurally bounded, the effect remains unresolved and the exit condition is not established.
++Define the **incident-consistent control-state collection** as every control state consistent with the independently supported implementation semantics and not excluded by the incident evidence. The state description includes implementation and version, configuration, persistent and session state, external dependencies, time-dependent inputs, and random seed or entropy state where captured.
+ 
+-[UNSURE ABOUT THIS: A substrate-neutral standard for counterfactual evaluation of nondeterministic controls is not resolved. Where replay or policy-bounded evaluation cannot establish the result, v0.2 classifies the effect as unresolved.]
++The counterfactual claim states the tested factor and the consequence-relevant outcome predicate, such as whether the control would reject, neutralize, modify, delay, escalate, or permit the alleged contribution.
++
++#### Mode 1: state-complete replay
++
++The incident-consistent control-state collection is established as one state. The control and its dependencies are reproduced at that state, the tested factor is changed, and every other consequence-relevant dimension is held equivalent. A reproducible outcome difference establishes an event-level difference. A reproducible equivalent outcome establishes event-level equivalence.
++
++#### Mode 2: state-bounded policy-complete evaluation
++
++A deterministic policy, transition system, independently validated executable model, or sound formal abstraction is complete for the relevant input class and every state in the incident-consistent control-state collection. Exhaustive or deductive evaluation compares the observed and counterfactual inputs over that complete collection.
++
++- Event-level difference is established only when the stated outcome-difference predicate holds for every incident-consistent state.
++- Event-level equivalence is established only when the consequence-relevant outcome is equivalent for every incident-consistent state.
++- If the result differs across incident-consistent states, the event-level counterfactual is unresolved.
++
++#### Mode 3: matched stochastic evaluation
++
++Where exact incident state or randomness cannot be reproduced, paired or matched trials may evaluate an outcome distribution. The evaluation independently records:
++
++- the control implementation, version, and configuration;
++- the incident-state equivalence class and excluded state dimensions;
++- the isolated tested factor;
++- the consequence-relevant outcome class and metric;
++- the sampling, pairing, seed-management, stopping, and exclusion rules;
++- the declared tolerance, error bound, or decision threshold;
++- and independent custody of trial inputs and outcomes.
++
++Numeric tolerances and assurance levels are supplied by an applicable overlay or assurance regime and are declared before the analysis. A matched stochastic result may support an overlay, assurance analysis, or population-level claim. It cannot by itself establish an event-specific MICRM exit for the selected consequence.
++
++The standard has five findings:
++
++| Finding | Exact factual claim | MICRM use |
++|---|---|---|
++| Event-level difference established | Mode 1 or Mode 2 establishes a different consequence-relevant control outcome for the selected event across the complete incident-consistent state collection | May support an event-specific transformation, cut, or exclusion claim |
++| Event-level equivalence established | Mode 1 or Mode 2 establishes an equivalent consequence-relevant control outcome for the selected event across the complete incident-consistent state collection | Excludes the claimed event-level control-visibility effect |
++| Distribution-level effect established | Matched stochastic evaluation establishes a declared change in the outcome distribution | May support an overlay, assurance analysis, or population-level claim; does not establish the selected event would differ |
++| Distributional equivalence established | Matched stochastic evaluation establishes equivalence within the declared tolerance | May resolve a distribution-level claim; does not prove event-level equivalence |
++| Counterfactual unresolved | Required state, model validity, trial design, or error bound is not established, or incident-consistent states yield mixed event-level results | Exit fails by burden where the event-level counterfactual is required; no outcome difference is thereby proven |
++
++A simulator, digital twin, surrogate, or reconstructed institutional process may be used only for the dimensions over which its validity is independently supported. Unvalidated dimensions remain unresolved.
++
++Counterfactual evaluation record:
++
++```text
++counterfactual evaluation record:
++  claim identifier:
++  affected control, layer, or seam:
++  selected incident event:
++  tested factor:
++  incident-consistent control-state collection or equivalence class:
++  evaluation mode:
++  control implementation, version, and configuration:
++  outcome predicate or distribution metric:
++  tolerance or error bound, if applicable:
++  finding:
++  evidence sources:
++  independent corroboration:
++  custody and modification control:
++  residual dark-surface bound:
++```
+ 
+ ---
+ 
+@@ -606,11 +763,23 @@
+     timing and expiry:
+     framing or envelope:
+     transformation lineage:
++    alleged contribution class identifier:
+     contribution-capacity profile:
++    distributed-component identifier, if any:
++    composition locus or ordered subgraph, if any:
++    composition rule or operator, if any:
++    co-component seam or path references:
++    structural-composition finding:
+ 
+   admission and Context formation:
+     admission controls:
+     accepted / rejected / transformed / quarantined:
++    accountability-equivalence comparison, if borderline:
++      embedded representation graph reference:
++      promoted representation graph reference:
++      separately committed result evidence:
++      resolution finding (equivalent / promoted / fork unresolved):
++      promoted traversal identifier, if established:
+     downstream Context binding:
+     input envelope:
+     protective scope:
+@@ -643,6 +812,8 @@
+     upstream witness:
+     downstream witness:
+     independent witness:
++    counterfactual evaluation record links, repeatable if used:
++      record link:
+     non-Gate record channels, repeatable per channel:
+       channel identifier:
+       evidence-record link:
+@@ -699,7 +870,20 @@
+ 
+ An overlay's apportionment rule does not alter the core bound set.
+ 
+-[UNSURE ABOUT THIS: Apportionment overlays can recreate incentives to retain upstream roots by underinvesting in Gate quality. A later version should provide an overlay-design warning without prescribing a liability regime.]
++### 13.1 Overlay incentive audit
++
++A MICRM-attached overlay that apportions burden among bound roots records whether its allocation rule creates incentives to weaken controls, narrow declarations, or suppress evidence. The audit is descriptive and does not prescribe a liability regime.
++
++At minimum, the overlay evaluates:
++
++- **Upstream-retention incentive:** whether a downstream root's allocated burden decreases when an upstream root remains bound, where the downstream root can influence that result through Gate quality, protective-scope declaration, path instrumentation, or evidence production.
++- **Evidence-suppression incentive:** whether a root's allocated burden decreases when evidence needed for another root's cut or exclusion is unavailable, ambiguous, withheld, or poorly retained.
++- **Control-avoidance incentive:** whether a root is allocated more burden for implementing, instrumenting, or successfully operating a consequence-relevant control than it would receive for omitting that control, holding the selected consequence and other conduct constant.
++- **Scope-minimization incentive:** whether a root can reduce allocated burden by declaring a narrower input envelope, protective scope, event class, or control role than the system actually performs.
++
++For each incentive found, the overlay states either a mitigation or an explicit justification for accepting it. Possible mitigations include contribution- or fault-based allocation independent of the number of remaining roots, control-quality credit, anti-spoliation or adverse-inference rules, and predeclared allocation rules that do not reward evidentiary ambiguity. These examples are non-exclusive and are not MICRM core requirements.
++
++The audit does not change candidate-root membership, attachment, propagation, or exit. It records incentive effects introduced by the overlay after the MICRM bound set has been determined.
+ 
+ ---
+ 
+@@ -723,7 +907,7 @@
+ 
+ ## 15. Worked Path Outcomes
+ 
+-These examples illustrate the ratified mechanics. They are not a substitute for incident-specific evidence.
++These examples illustrate the full-draft mechanics. They are not a substitute for incident-specific evidence and do not constitute ratification of the uncertainty-resolution additions.
+ 
+ ### 15.1 Prompt injection across an agent seam
+ 
+@@ -797,22 +981,40 @@
+ - The self-check does not establish an independent Gate for severance.
+ - Structural exclusion at the seam or a separate external post-selection control may still establish exit.
+ 
++### 15.8 Distributed command and authority
++
++A produces a command identifying a protected operation. B separately produces an authority representation required by the receiving interface. Neither state alone is type-compatible with the alleged contribution class. C receives both within the required interval and combines them at an identified command-plus-authority locus.
++
++Result:
++
++- the indexed collection forms a distributed contribution mechanism only when every structural channel-composition condition is established;
++- A and B are evaluated for attachment to the components attributable to their traversals;
++- C attaches if its traversal performs consequence-relevant combination, selection, authorization, representation, or control;
++- a transport-only relay on either path may be structurally excluded without stopping propagation from the component's origin root;
++- and if any required association, timing, authority, reach, type, or composition condition is unresolved, the composition finding is unresolved and cannot support exit.
++
++### 15.9 Borderline admission mechanism
++
++A third-party service under root C evaluates an incoming artifact and can commit it to a quarantine queue or a released-content queue. The queue placement persists independently and becomes Context for B.
++
++Result:
++
++- embedding the service only inside B's Context would hide C's bonded root, a separate consequence, and a path-level control role, so the representations are not accountability-equivalent and C's queue-placement decision is promoted to a traversal;
++- a passive format check inside B that emits evidence but produces no graph-significant difference may remain a Context-boundary control when accountability equivalence is independently established;
++- and if equivalence or the separately committed result cannot be established or excluded, both evidence-compatible representations remain in an admission-resolution fork and an exit must hold under every evidence-compatible representation in which the root is a candidate.
++
+ ---
+ 
+ ## 16. Deferred Register
+ 
+-The following are not resolved by v0.2:
++The following remain outside v0.2:
++
++1. **Gate modification re-entry:** when a consequence-relevant Gate modification must be modeled as a new Action Selection rather than an internal Gate-stage transition.
++2. **Consequence-resolution rule:** formal rule for selecting the consequence node and incident resolution where multiple causal descriptions are possible.
++3. **Population-level control coverage:** formal treatment of whether a control evaluated every qualifying case across a run, deployment, or population, including denominator definition, false-negative estimation, and required assurance levels. The core requires positive per-event outcome evidence where exit depends on a permitted or non-intervened event, and disclosure of record-channel emission policy; coverage measurement standards and required coverage levels belong to assurance regimes and overlays.
++4. **Keep-in-pocket architecture:** tiering, irreversibility, two-ledger residual, mount-point regime, and bonded-root economics remain outside this draft unless separately ratified.
+ 
+-1. **Distributed-mechanism glossary:** formal definition of a contribution-bearing component that becomes operative only in combination.
+-2. **Capacity composition:** formal treatment of how type, authority, reach, and causal capacity combine across multiple channels or roots.
+-3. **Cross-substrate causal-capacity examples:** at least one worked example for each of the five substrate families before causal-capacity terminology is treated as fully formal.
+-4. **Gate modification re-entry:** when a consequence-relevant Gate modification must be modeled as a new Action Selection rather than an internal Gate-stage transition.
+-5. **Nondeterministic counterfactuals:** evidentiary standard for replay or policy evaluation where the control is stochastic or stateful.
+-6. **Admission-traversal threshold:** formal graph-resolution rule for deciding when admission machinery becomes its own traversal.
+-7. **Overlay incentive warning:** guidance for overlay authors where apportionment can reward weak Gate construction or evidence withholding.
+-8. **Consequence-resolution rule:** formal rule for selecting the consequence node and incident resolution where multiple causal descriptions are possible.
+-9. **Population-level control coverage:** formal treatment of whether a control evaluated every qualifying case across a run, deployment, or population, including denominator definition, false-negative estimation, and required assurance levels. The core requires positive per-event outcome evidence where exit depends on a permitted or non-intervened event, and disclosure of record-channel emission policy; coverage measurement standards and required coverage levels belong to assurance regimes and overlays.
+-10. **Keep-in-pocket architecture:** tiering, irreversibility, two-ledger residual, mount-point regime, and bonded-root economics remain outside this draft unless separately ratified.
++The prior deferrals for contribution typing, distributed-mechanism composition, cross-substrate causal-capacity examples, admission-traversal resolution, nondeterministic counterfactuals, and overlay incentive effects are resolved in Sections 4.10, 4.11, 5.3, 7.2, 10.3, 10.7, and 13.1.
+ 
+ ---
+ 
+@@ -839,7 +1041,7 @@
+ 
+ ### 17.3 Joint-accountability development contributions
+ 
+-The following emerged through the joint-accountability dialogue between Larry Peseckis and AI collaborators. Larry ratified the architectural content for inclusion in this review draft; the integrated wording remains subject to full-text ratification.
++The following emerged through the joint-accountability dialogue between Larry Peseckis and AI collaborators. Architectural content developed through 2026-07-15 was ratified for inclusion in the prior review state. The six uncertainty resolutions added on 2026-07-16 remain review-draft proposals until Larry ratifies the complete full draft.
+ 
+ At the provenance resolution used in v0.2, the items below are attributed to the dialogue as a development process rather than assigned item by item to a specific participant, except where a finer attribution is stated explicitly. This avoids unsupported fine-grained claims where the iterative record and session ledgers do not cleanly support them. It does not imply equal contribution, erase Larry's ratification authority, or prevent a later scholarly reconstruction from the preserved conversation record.
+ 
+@@ -871,7 +1073,20 @@
+ - the counterfactual control-visibility flag and minimum rule;
+ - and the distinction between record-channel emission policy and residual dark surfaces, including the positive per-event outcome requirement where exit depends on a permitted or non-intervened event, which emerged in dialogue prompted by the five-department Chinese 人工智能拟人化互动服务管理暂行办法 concerning AI anthropomorphic interaction services, effective 2026-07-15, and was handed into MICRM development the same day.
+ 
+-### 17.4 Superseded formulations
++### 17.4 Resolution of prior uncertainty markers
++
++The following were constructed in dialogue at Larry's direction on 2026-07-16 and are included in this full review draft at dialogue-level attribution:
++
++- the incident-complete alleged-contribution type record and field-specific compatibility rule;
++- the accountability-sensitive graph-resolution rule for admission traversal promotion and unresolved representation forks;
++- the distributed contribution mechanism definition and mechanism-specific structural channel-composition test;
++- the operative causal capacity definition, its separation from generalized but-for causation, and the five-substrate examples;
++- the state-complete, state-bounded policy-complete, and matched-stochastic counterfactual evidence modes; and
++- the overlay incentive audit separating MICRM's bound set from apportionment-created Gate, evidence, control, and scope incentives.
++
++These resolutions replace the corresponding deferrals in the prior review state. They require integrated review and Larry's full-text ratification before canonicalization.
++
++### 17.5 Superseded formulations
+ 
+ The following working formulations are not part of v0.2:
+ 
+@@ -888,9 +1103,9 @@
+ - "known channel" as the dark-surface exit threshold;
+ - and downstream "reliance" as the authority-representation discriminator.
+ 
+-### 17.5 Version status
++### 17.6 Version status
+ 
+-This provenance appendix records the development history represented by the draft. The integrated wording remains non-canonical until Larry ratifies the complete document and it is committed as the next canonical version.
++This provenance appendix records the development history represented by the full draft. The integrated wording remains non-canonical until Larry ratifies the complete document and it is committed as the next canonical version. The prior reviewer ratification of draft SHA-256 `a493d4793431cd31b0772a05a60e2856f1af055e464f43ab216eb4ab67dc988b` does not extend to the substantive uncertainty resolutions added in this version.
+ 
+ ---
+ 
+@@ -906,8 +1121,10 @@
+ - **Gate:** the positional final control stage after Action Selection and before Actuation.
+ - **Control:** the functional supertype that may operate at any layer or transition.
+ - **Attachment and propagation:** separate questions at every intermediary.
+-- **Overlays:** legal, regulatory, contractual, safety, and sector regimes that may apportion the core bound set.
++- **Contribution type and composition:** incident-complete type records and mechanism-specific composition determine whether states or channels can carry an alleged contribution class.
++- **Counterfactual evidence:** event-level and distribution-level findings are separated for deterministic, stateful, and stochastic controls.
++- **Overlays:** legal, regulatory, contractual, safety, and sector regimes may apportion the core bound set; MICRM-attached apportionment overlays record the incentive effects introduced by their allocation rules.
+ 
+ ---
+ 
+-*MICRM-v0.2 review draft. Compiled from MICRM-v0 and ratified joint-accountability architecture through 2026-07-15. Non-canonical until full-text ratification and witnessed commit.*
++*MICRM-v0.2 full review draft. Compiled from MICRM-v0 and joint-accountability development through 2026-07-16. All prior explicit uncertainty markers are resolved in the text. Non-canonical until integrated review, full-text ratification, and witnessed commit.*

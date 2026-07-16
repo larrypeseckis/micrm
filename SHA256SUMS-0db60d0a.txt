@@ -1,0 +1,6 @@
+0db60d0a240361d410ac2370a040fbadf284a203d9b7b22e19f7cc795897f62f  MICRM-v0.2-full-draft-0db60d0a.md
+3d3ea53cf0d11a2b91bbdc2473b8d92562947adcdcc8f791913cef35100652d8  MICRM-v0-to-v0.2-full-draft-changelog.md
+8134a231b0784c1f0aeec3d03197b7aab9c9c2537ab52015c5d3b3f70894b23c  MICRM-v0-to-v0.2-full-draft.diff
+dae38c5ab493759631b440bfaaad1540f24d37a5acfc1fbcb2bc1e1a0a5e5cf6  MICRM-a493d479-to-v0.2-full-draft.diff
+c624c4c5419fadff22874d858939db0537cc4849ccb6f7f72a0c027f444cb776  MICRM-v0.2-uncertainty-resolution-memo.md
+ad39035cbec7b1af838333627acdfd1617dc3b7b47f3985420ac620e160f477b  VERIFICATION-0db60d0a.txt
