@@ -190,6 +190,33 @@ Resolved all six explicit uncertainty markers present in review state `a493d479`
 
 Record support was added for the new rules, including alleged-contribution and composition fields, admission accountability-equivalence records, admission-resolution forks, promoted-traversal identifiers where established, and standalone counterfactual-evaluation records linked from the seam evidence block. Two new worked outcomes cover distributed command-plus-authority composition and borderline admission promotion.
 
+## Post-ratification repair rounds (2026-07-16)
+
+### Provenance events
+
+- Larry Peseckis ratified full-draft state SHA-256 0db60d0a240361d410ac2370a040fbadf284a203d9b7b22e19f7cc795897f62f.
+- That state had previously entered the repository as the explicitly non-canonical provenance commit 5115be08a4b2ff5bff7b7699519199de659efeeb.
+- Post-ratification repair patch e848e08e (10 hunks) produced candidate 05286c78; repair patch 750711af (4 hunks) produced candidate 47baffc2. Both candidates are non-canonical and not author-ratified.
+
+### Repair round 1 (0db60d0a to 05286c78, patch e848e08e)
+
+- Admission resolution replaced by an ordered two-stage rule: separate-result existence first, accountability equivalence second, with a five-row decision table and a defined "separately committed admission result." Seam schema records the two findings separately. Worked outcome 15.9 follows the decision order.
+- Operative causal capacity re-founded relative to the evaluation point; the candidate cut or exclusion is not presumed.
+- Cut condition 7 extended to indexed components of a proposed distributed contribution mechanism, with composition present, unresolved, and excluded mapped to distinct cut effects.
+- Authoritative run-level distributed contribution mechanism record added as Section 11.1; participating seams link by record link and component index instead of duplicating the final composition finding.
+- Provenance corrections: two superseded record-channel formulations added to 17.5; examples identify their author-ratified source state; "material to the incident" replaced by "relevant to the incident"; 17.6 records the ratification and repository-commit sequence.
+- Section 7.2 dark-surface enumeration restated class-wise (nonblocking precision).
+
+### Repair round 2 (05286c78 to 47baffc2, patch 750711af)
+
+- Section 7.2 path continuity made evaluation-relative: independently established structural facts upstream of the composition locus are applied; a candidate cut or exclusion whose validity depends on the composition finding is not presumed. This removes the residual candidate-cut circularity through the composition cross-reference.
+- Admission-resolution state table completed: the unresolved separate-result row uses the schema vocabulary; the one-compatible-representation case requires reclassification of the separate-result finding before selection; the zero-compatible case leaves the graph unresolved with neither representation established.
+- Sections 17.3 and 17.4 reconciled with 17.6: the six uncertainty resolutions are recorded as author-ratified in source state 0db60d0a, with post-ratification repair wording separately marked as requiring renewed review and ratification.
+
+### Checklist correction
+
+- "Commit only after integrated review" reworded to: "Commit the canonical successor only after integrated review and author ratification of the exact post-review byte state."
+
 ---
 
 ## Modified
@@ -343,7 +370,7 @@ Contribution typing, distributed-mechanism composition, five-substrate causal-ca
 - [ ] Confirm provenance ledger.
 - [ ] Confirm superseded-formulation list.
 - [ ] Confirm no overlay-specific apportionment entered the core and confirm the overlay incentive audit remains descriptive.
-- [ ] Commit only after integrated review.
+- [ ] Commit the canonical successor only after integrated review and author ratification of the exact post-review byte state.
 
 ---
 
