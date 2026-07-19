@@ -1,0 +1,54 @@
+# Closure evaluation: candidate 65.3, Execution-binding rule
+
+*Prepared 2026-07-17 (America/Denver). Evaluator: MICRM Claude (correlated rater). Source state: register r10, SHA-256 b0bb2c6023a6547fafa6143e29ddb88e5e80b19c55674f65a937588cdb0d3945, Section 65 proposition 3. Protocol v0.2 (5d9e65f8). Evaluated under the ratified investigative-frame authority and claim-bounded functional mediation rulings, the recorded successor split (Restricted-evidence admissibility; Verification scope and composition ceiling; execution binding separate), and closure records for 65.1, 65.2, 65.7, 65.10, and 7.2.*
+
+## Candidate text under evaluation
+
+"Evidence that an artifact was reviewed, approved, signed, committed, or attested does not establish that it produced the selected event. The evidence must bind the artifact and configuration to the actual runtime traversal or Actuation."
+
+## Criterion findings
+
+**4.1 Provenance and identity:** established. Cluster 6, r8 origin, unchanged through r10.
+
+**4.2 Gap necessity.** Split finding, but with a materially stronger positive half than the prior passes. The negative half, that approval-class evidence does not establish execution, is derivable: v0.2's claim-relative evidence discipline and burden rules already refuse an exit resting on an unbound artifact claim. The positive half is non-derivable and is where canonical v0.2 has a genuine structural gap. v0.2 binds events within a run extensively: cut condition 6 links Gate outcome to the Actuation record, the seam record witnesses payload identity across handoffs, the transformation tiers compare artifacts for the selected consequence. What v0.2 nowhere requires is the identity chain between a development-time or supply-chain artifact, the reviewed model build, classifier bundle, policy file, firmware image, and the runtime instance that served the selected traversal. Every within-run binding in v0.2 presumes the executing artifact's identity is what it is claimed to be; nothing in the core states what establishing that identity requires. Two pressure tests already in the register, 67.6 (proof without runtime binding) and 67.7 (router substitutes the serving model), exploit exactly this gap, and two completed closure passes (65.2 correction 2, the 65.7 temporal note) leaned on 65.3 by reference. Under the what-breaks-if-absent test, other architecture is already load-bearing on this rule. That is the strongest necessity finding of the cluster.
+
+**4.3 Exact-claim sufficiency.** Three defects. First, "bind" is undefined, the same defect class as the retired "material": without a stated finding structure, binding collapses into assertion. The definition exists already as record 66.2's three findings, lineage continuity, runtime artifact identity, execution binding, each established / excluded / unresolved; the proposition must reference that structure or state it. Second, binding cannot mean end-to-end digest equality, because compilation, quantization, and packaging change bytes by design; the rule must state that binding may be established through evidenced transformation lineage with per-step semantic or capacity-change findings, which is precisely 65.6's content (see 4.4). Third, the enumeration "reviewed, approved, signed, committed, or attested" is illustrative and must be marked non-exhaustive, the same repair applied to 65.7's mechanism list. One reach requirement also needs stating: in routed, load-balanced, or multi-instance systems, binding must reach the instance that served the selected traversal, not the deployment in general; 67.7 is the demonstration.
+
+**4.4 Non-redundancy.** The principal structural finding: 65.3 and 65.6 are one rule. 65.3 states the principle, approval-class evidence does not establish execution and binding is required; 65.6 states the mechanism, evidenced lineage from the reviewed artifact through transformation to the executed artifact, with continuity preserved rather than broken by compilation-class operations. Neither is complete alone: 65.3 without 65.6 leaves "bind" undefined; 65.6 without 65.3 is a lineage requirement with no stated consequence. Recommended: merge into a single Execution binding successor, principle sentence plus lineage clause, subject to 65.6 receiving its own pass confirming the merge, per the one-at-a-time rule. Distinctness from the binding family is clean and worth recording for drafting organization: 7.1 binds decision to proposal, 7.2 binds decision validity to the Actuation moment, 65.3/65.6 bind artifact identity to the executing instance. Three binding rules, three distinct objects, no overlap; a future draft may group them as a binding section without merging them.
+
+**4.5 Scope classification.** Core spine candidate. The principle-plus-lineage rule is architecture, not conformance: it defines when a class of exit-supporting claims is establishable at all. Record 66.2 is its evidence apparatus at the record layer. What counts as identity evidence per substrate, digest, signed manifest, part serial, firmware checksum, document version and seal, belongs to substrate profiles, not the core.
+
+**4.6 Substrate treatment.** Instantiates cleanly across all five substrates, and the cloud case supplies the sharpest everyday example: an approved infrastructure plan does not establish the applied state, and plan-to-apply drift is the institutionalized form of the reviewed-artifact substitution this rule blocks. AI: model build to serving instance through quantization and routing. OT: approved firmware to installed firmware. Institutional: reviewed contract draft to executed instrument version.
+
+**4.7 Operational findings.** Record 66.2's three-finding structure is exactly right and needs no extension: lineage continuity, runtime artifact identity, execution binding, each established / excluded / unresolved, with any unresolved finding blocking the dependent claim or exit by burden.
+
+**4.8 Evidence and dark-surface treatment.** Consistent. Each transformation step in the lineage carries its own custody, witness, and residual dark surface per 66.2; an unwitnessed step is manufactured dark surface inside the identity chain and leaves runtime identity unresolved.
+
+**4.9 Adversarial pressure.** Five vectors, all resolved by the rule as repaired. (1) Reviewed-artifact substitution, audit the good artifact, run another: blocked directly; this is the rule's reason to exist. (2) Stale attestation, attest at boot, swap after: binding requires load-event and validity-interval linkage, cross-reference to 7.2, already present in 66.2's deployment block. (3) Routing substitution, 67.7: per-traversal reach requirement from 4.3. (4) Configuration drift, same artifact, different active configuration: "and configuration" is in the candidate text; 66.2 carries active configuration; no repair needed. (5) Semantic-equivalence laundering, "the quantized model is equivalent to the audited model" asserted without evidence: blocked by per-step semantic or capacity-change findings in the lineage; equivalence is a finding, never an assumption.
+
+**4.10 Interaction consistency.** Consistent with the successor split: execution binding remains the separate third rule, referenced by Restricted-evidence admissibility through the claim-object binding clause (runtime claims require execution binding) without duplication. Consistent with 7.1, 7.2, the transformation tiers (whose consequence-relative comparison logic the lineage findings reuse at the artifact level), and the ratified functional-mediation boundary (build, packaging, routing, and loading services are functionally mediating components and enter the auditable run at claim resolution, which 65.6's operation list already anticipates).
+
+**4.11 Scope-authority ownership.** No scope expansion; no author ruling required beyond disposition.
+
+**4.12 Open questions affected.** Cluster 6 question 5 (semantic continuity across compilation and conversion) becomes the merged rule's principal open question and moves from cluster-level to successor-level. Question 7 (minimum runtime evidence binding build, bundle, prompt, and policy to one event) is directly served by 66.2's traversal links. Question 8 (dynamically loaded tools, routers, late-selected policies) is served by the per-traversal reach requirement.
+
+## Candidate closure record (proposed)
+
+```text
+candidate closure record:
+  candidate identifier: 65.3 Execution-binding rule
+  exact source state: r10, SHA-256 b0bb2c6023a6547fafa6143e29ddb88e5e80b19c55674f65a937588cdb0d3945
+  canonical gap addressed: no v0.2 requirement links reviewed or attested artifact identity to the runtime instance serving the selected traversal
+  failure if absent: reviewed-artifact substitution and proof-without-binding (67.6, 67.7) are blocked only implicitly by burden; the positive structure of establishing runtime identity is stated nowhere; two completed closure passes already depend on this rule by reference
+  non-redundancy finding: negative half derivable from v0.2 burden and exact-claims rules; positive lineage-binding structure non-derivable; 65.3 and 65.6 are principle and mechanism of one rule
+  scope classification: core spine candidate; record 66.2 as evidence apparatus; identity-evidence classes to substrate profiles
+  required wording repairs: define binding through the three lineage findings of record 66.2; state that binding may be established through evidenced transformation lineage with per-step semantic or capacity-change findings; mark the approval-evidence enumeration non-exhaustive; state per-traversal reach for routed and multi-instance systems
+  binding family note: 7.1 (decision to proposal), 7.2 (decision validity to Actuation moment), 65.3/65.6 (artifact identity to executing instance); distinct objects, group without merging at drafting
+  reviewer disposition: Admissible as core spine candidate; merge with 65.6 recommended, subject to 65.6's own one-at-a-time pass
+  Larry disposition: pending
+  final state: pending author disposition
+```
+
+## Rater note
+
+This is the first cluster 6 pass recommending core spine admission rather than supersession, and the necessity finding rests substantially on two pressure tests and two prior closure records produced by this same correlated dialogue. A decorrelated reviewer should test the strongest counter-reading: that v0.2's claim-relative evidence standard plus record 66.2 alone, with no core proposition, already yields every accountability result, making 65.3 a record requirement rather than spine. My response to that reading is recorded here for the test: the rule defines establishability conditions for an entire claim class that other spine rules consume, which is architecture in the same sense condition 6 is architecture, but the counter-reading is coherent and deserves an uncorrelated look.

@@ -1,0 +1,49 @@
+MICRM cluster 6 closure package — verification record
+Packaged: 2026-07-18 (America/Denver)
+
+Package contents: 17 substantive files + this verification record + 1 manifest = 19 archive entries.
+The manifest (SHA256SUMS.txt) lists 18 entries: every file except itself. A manifest does not
+list or hash itself. sha256sum -c against the manifest must pass 18 of 18.
+
+Substantive files (17):
+  1  corrected cluster 6 closure summary
+  2  author-ratification instrument (acts on Larry Peseckis's verbatim statement)
+  3  LARRY-RATIFICATION-STATEMENT.txt (Larry's verbatim ratifying words, the authoritative origin)
+  4-11  eight candidate closure evaluations (65.2, 65.2/65.7-record, 65.3, 65.6, 65.4, 65.9, 65.5, 65.8)
+  12-17 six reviewer-response artifacts (65.2/65.7/65.10 dispositions doc, 65.3, 65.4, 65.5, 65.8, 65.9)
+
+Package-verifiable results (checkable from files inside this archive):
+  - archive entry count and manifest file count
+  - sha256sum -c SHA256SUMS.txt passes 18 of 18
+  - the summary and ratification instrument hash to the values named in the manifest
+  - Larry's verbatim ratifying statement is present and hashes to
+    654a36ba701c90f14f34216769a40df3d1e07c4ff507111f6b387c6d0365ee28
+
+Declared external invariants (asserted, NOT verifiable from this package because the objects
+are not included):
+  - canonical MICRM-v0.2 unchanged, declared SHA-256
+    4180eaefa0369811262b805d189b3c572c8305d107bed6b84dd12c685650b0e2
+  - register r10, declared SHA-256
+    b0bb2c6023a6547fafa6143e29ddb88e5e80b19c55674f65a937588cdb0d3945
+  - protocol v0.2, declared SHA-256
+    5d9e65f8161c3788024ac8869834362a8783f0b5996620627e3ef0e18e1208b2
+  - sections 3 onward of the corrected summary byte-identical to the prior 06fce6e9 summary
+  These are declared invariants carried forward from prior verified states; verifying them
+  requires the named external objects, which this archive does not contain.
+
+Repairs in this package relative to the prior 64977715 package:
+  1  The self-authored "author-dispositions witness" was removed. It asserted that earlier
+     conversational confirmations occurred and labeled that assertion a witness; it was evidence
+     that the package made the claim, not evidence of the claimed event.
+  2  Replaced by an author-ratification instrument that records a present-tense ratification event
+     created by Larry Peseckis, plus LARRY-RATIFICATION-STATEMENT.txt containing his verbatim
+     ratifying words as the authoritative origin. The instrument explicitly does not claim to prove
+     earlier conversational confirmations.
+  3  Summary Section 2 source chains for 65.1, 65.6, 65.10 now cite the ratification instrument for
+     final confirmation.
+  4  This verification record states the correct file counts and delegates manifest identification
+     to the packaged SHA256SUMS.txt file. The manifest lists the hashes of the other files; a
+     manifest does not contain its own hash.
+  5  External comparison objects are labeled declared external invariants, not package-verified.
+
+Canonical MICRM-v0.2 remains unchanged (declared invariant, per above).
