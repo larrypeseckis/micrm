@@ -1,0 +1,146 @@
+--- ../MICRM-v0.3-candidate-register-r11-ad4ec23e.md	2026-07-19 03:53:48.000000000 +0000
++++ MICRM-v0.3-candidate-register-r12.1-666e744e.md	2026-07-19 14:49:52.251230175 +0000
+@@ -4,8 +4,9 @@
+ *Development status: Non-canonical candidate register*  
+ *Canonical base: MICRM-v0.2, SHA-256 `4180eaefa0369811262b805d189b3c572c8305d107bed6b84dd12c685650b0e2`*  
+ *Canonicalization commit: `bfbf1922164648244216030c849cde58dc731539`*  
+-*Register date: 2026-07-18*  
+-*Register revision: r11 | Prior register SHA-256 `b0bb2c6023a6547fafa6143e29ddb88e5e80b19c55674f65a937588cdb0d3945`*  
++*Register date: 2026-07-19*  
++*Register revision: r12.1 | Prior register SHA-256 `ad4ec23ea9b12ebf318a1fa770686a7d36755595b939d840dad6d0456110a589` (r11); intermediate r12 SHA-256 `e9d11941dbb662d0061f3192508b6dd7d42243a3f12d8647aee4d4abd368cee1`*  
++*r12 integrated author-confirmed results for Candidates 8.1 (bonded-root qualification and delegation), 8.2 (stated normative stance and status separation), and 8.5 (contribution-class governance). r12.1 applied exactness and self-consistency repairs (clause apostrophe restoration, 8.5 seam characterization, sequence and construction-status correction, and this metadata pass). Wording for the foundational cluster-3 clauses is carried verbatim from Larry Peseckis's ratification (LARRY-cluster3-clause-ratification.txt, SHA-256 `ad7eda95f5e7aa58479f70f1f90146a6c61c2ae8dc278328fb11ecae807cfb95`; exact-verbatim verification depends on that artifact, delivered in the r12 source package and included by reference). No canonical or named-draft effect.*  
+ 
+ > This file does not modify MICRM-v0.2. It records candidate architecture for later review and ratification.
+ 
+@@ -3566,16 +3567,88 @@
+ 
+ Absence claims require bounded source inspection.
+ 
++### 109A. r12 integration of author-confirmed hardening results
++
++*This section records the author-confirmed, integration-ready results for Candidates 8.1, 8.2, and 8.5. It is candidate-register content, not a named v0.3 draft and not canonical. The cluster-3 clauses below are carried verbatim from Larry Peseckis's ratification statement, SHA-256 `ad7eda95f5e7aa58479f70f1f90146a6c61c2ae8dc278328fb11ecae807cfb95`.*
++
++#### 109A.1 Candidate 8.1 confirmed clauses (bonded-root qualification and delegation)
++
++The following three clauses are ratified as amended and enter the register verbatim. They sit under the first invariant and the bonded-root qualification rule.
++
++**Composite same-principal qualification** [Normative commitment; ratified as amended]
++
++Same-principal termination is established by terminal-principal identity at the incident resolution, not by membership overlap, shared ownership, common control, organizational affiliation, employment relationship, or a common human endpoint.
++
++A composite principal may qualify as one bonded root only where independently supported evidence establishes the collective’s identity, decision rule, authority-bearing capacity, accountability-bearing capacity, and continuity over the relevant interval.
++
++Where one path appears to terminate at the composite principal and the other at a constituent, same-principal termination is established only where independently supported evidence shows that the constituent endpoint is representational rather than terminal and that the relevant authority or accountability obligation remains vested in the composite principal.
++
++Where independently supported evidence establishes that the constituent and composite are distinct terminal principals, authority-accountability closure fails. Where terminal-principal identity or representative capacity cannot be established or excluded, closure is unresolved.
++
++An action is classified as orphaned only where different terminal principals are established. Unresolved closure is recorded separately and cannot satisfy the first invariant. Neither closure failure nor unresolved closure is repaired by shared membership, ownership, control, affiliation, employment, or a shared human endpoint.
++
++**Human and institutional termination** [Normative commitment; ratified as amended]
++
++A terminal bonded root may be a natural person, legal entity, institution, or defined collective that satisfies the applicable composite-principal qualification.
++
++The MICRM core does not require that a bonded root ultimately terminate at a human principal. A legal, regulatory, contractual, safety, or sector-specific overlay may impose an ultimate-human-responsibility requirement; the core does not.
++
++The root’s principal type, identity, authority-bearing capacity, accountability-bearing capacity, and applicable decision or representation rules must be established by independently supported evidence at the incident’s selected resolution.
++
++Principal identity is not established solely by a technical identifier, ownership relation, product label, organizational affiliation, employment or agency relationship, or trace to a human participant. A declaration of principal type is evidence but is not sufficient by itself.
++
++**Investigative-frame linkage for root resolution** [ratified with alternative-resolution and invariance clauses]
++
++The resolution at which terminal-principal identity, composite-principal qualification, and authority-accountability closure are evaluated is an investigative-frame selection.
++
++The selecting authority, authority source, chosen resolution, relevant inclusions and exclusions, and any dark surface created by that selection are recorded under investigative-frame authority governance.
++
++Investigative-frame authority may select the resolution at which the claim is evaluated. It cannot establish principal identity by declaration, convert membership or affiliation into identity, or suppress an evidence-compatible alternative resolution.
++
++Where two or more admissible evidence-compatible resolutions produce different bonded-root or closure findings, the resolution fork is retained and any dependent accountability exit remains unresolved. Where the result is invariant across every admissible resolution, resolution uncertainty does not block that result.
++
++The remaining cluster-3 propositions (identity ceiling, traceability-not-bonding, bonded-root relation, authority-to-authorize separation, root-continuity, multi-root non-collapse) enter as evaluated in the cluster-3 closure record and require no further amendment.
++
++#### 109A.2 Candidate 8.2 confirmed content (stated normative stance and status separation)
++
++The author stance declaration is confirmed (source artifact MICRM-8.2-author-stance-declaration, SHA-256 `8d72096a36cb30bbfcf21956b9b61d3f2a1cf3869092451f9f11a053c5cc77dd`, included in the r12.1 package). Its operative directive for register and draft text: the second invariant and every rule allocating unresolved uncertainty against exit are **Normative commitments**, marked as such, with rationale and accepted costs stated beside the operative rule rather than only in a preface. The five claim classes for explicit labeling are: Structural definition, Normative commitment, Evidence rule, Assumption, Open construction question, Overlay-dependent result.
++
++Burden rationale (stated beside the second invariant in a future draft): the roots that design, authorize, operate, and instrument machine systems generally control more of the evidence needed to establish cuts and exclusions than an external investigator; allowing missing or root-controlled evidence to support exit would reward opacity, weak instrumentation, and selective retention; requiring evidence-supported exit creates an instrumentation incentive; substrate-neutral structural binding must precede legal or economic apportionment; uncertainty about contribution must not be converted into exculpation.
++
++Accepted costs (stated beside the rule): broader presumptively bound sets; higher instrumentation and verification burdens; fewer event-specific exits for opaque, stochastic, fused, or Gate-less systems; unresolved structural accountability where factual contribution is not established; operational friction for shared and multi-party systems; pressure to redesign systems before strong exit claims. These are not findings of wrongdoing.
++
++Status separation (three independent findings): structural accountability status (bound / exited / authority-accountability closure failure / unresolved); participation or contribution finding (established / excluded / unresolved); legal or overlay result (regime-supplied only). A failed exit is not proof of causation, misconduct, negligence, fault, or liability. Provenance establishes document identity and development chronology, not architectural correctness or legal authority.
++
++#### 109A.3 Candidate 8.5 confirmed rule (contribution-class governance), repairs integrated
++
++Confirmed core rule, with the four reviewer repairs integrated:
++
++1. **Admissibility gate:** a proposed class enters the admissible evidence-compatible set only where every result-relevant field is grounded by the selected consequence, incident evidence, receiving-interface semantics, authority and provenance predicates, temporal and quantitative relations, multiplicity, persistence, composition conditions, and selected resolution.
++2. **No bare-imaginability unresolvedness** [Normative commitment]: an unsupported hypothetical class does not enter the admissible set and does not create unresolvedness.
++3. **Competing-class burden** [Normative commitment]: where retained admissible classes produce different MICRM outcomes, the affected finding is unresolved.
++4. **Result invariance** [Normative commitment]: where every retained admissible class produces the same result, class-selection uncertainty does not block that result.
++5. **Class-version revision:** A revision creates a new versioned contribution-class definition. Every prior attachment, propagation, cut, exclusion, candidate-root, dark-surface, and exit finding whose result depended on a revised field is reopened for the new class version and may not be carried forward without re-establishment. Findings independent of the revised fields persist. Prior findings remain valid only as findings under their original class version. The revision authority, changed fields, reason, evidence, affected findings, and reopening result are recorded.
++6. **Admissible-set persistence:** A newly proposed admissible class joins the versioned admissible-class set. It does not supersede or remove another admissible class unless independently supported evidence establishes that the earlier class is inadmissible, no longer incident-compatible, or was replaced through an authorized revision subject to the reopening rule.
++7. **Class-discovery bound:** Failure to discover another contribution class does not establish that none exists. A residual class-discovery dark surface blocks a dependent finding only where independently supported evidence identifies a bounded unexamined source, class family, interface semantic, evidence set, or resolution dimension capable of yielding an admissible outcome-changing class. Bare epistemic possibility does not create unresolvedness.
++
++Terminology: **result-relevant fields** are fields whose value can change class admissibility or an attachment, propagation, cut, exclusion, candidate-root, dark-surface, or exit finding. This term replaces the earlier "material fields" usage, which is not adopted while Candidate 8.3 materiality remains unresolved.
++
++The versioned contribution-class governance record (proposer, class version, predecessor version, grounding evidence per field, retained competing classes, reopened and preserved findings, result delta, discovery sources, residual class-discovery dark surface, closure finding) is retained as apparatus.
++
++#### 109A.4 Delivery-seam record (characterized presentation transformation)
++
++The Candidate 8.5 closure evaluation was produced with byte identity SHA-256 `3d4b4ca54735209a6c734ccb09b9c105e703cfbe05a59ca3af62e61e8e1a292a` (verified in the producing runtime and its staged output). The reviewing runtime reported reviewing bytes SHA-256 `2795466cc8ecffdeb53ae8bf8efde5ee82de6295e64a5d020806ae8f7995c4c5`. These are not equal. A transformation occurred somewhere in the delivery path between production and review. The transformation has since been characterized: markdown headings and emphasis were stripped, blank lines, list markers, and a blockquote marker were collapsed or removed, line endings were changed to CRLF, and the fenced-code language marker was omitted, while the substantive prose was unchanged after formatting normalization. The reviewer has now reviewed the original `3d4b4ca5` bytes directly and confirms the 8.5 disposition is unchanged. Status: characterized presentation transformation; byte identity unequal; substantive review confirmed against original `3d4b4ca5` bytes. This record does not attribute fault and does not claim byte equivalence.
++
+ ### 110. v0.3 release-gate classification
+ 
+ The following are release blockers before creation of a named non-canonical MICRM-v0.3 draft:
+ 
+ | Release-gate item | Required state before named v0.3 draft |
+ |---|---|
+-| Candidate 8.1 bonded-root qualification and delegation | Proposition-level closure with exact root and delegation treatment |
+-| Candidate 8.2 stated stance and status separation | Integration-ready wording |
++| Candidate 8.1 bonded-root qualification and delegation | CONFIRMED (r12 section 109A.1); clauses ratified verbatim |
++| Candidate 8.2 stated stance and status separation | CONFIRMED (r12 section 109A.2); stance declaration ratified |
+ | Candidate 8.4 minimum substrate profiles | Four profiles completed and pressure-tested |
+-| Candidate 8.5 contribution-class governance | Proposition-level closure and candidate record |
++| Candidate 8.5 contribution-class governance | CONFIRMED (r12 section 109A.3); core rule plus repairs ratified |
+ | Runtime claim binding | Integrated candidate text prepared from 65.3 and 65.6 |
+ | Gate-to-Actuation validity continuity | Already integration-ready; preserve through draft integration |
+ | Investigative-frame authority | Exact candidate text and record integration prepared |
+@@ -3596,23 +3669,26 @@
+ 
+ The r10 Section 95 closure order is complete and superseded.
+ 
+-The next one-at-a-time sequence is:
++Candidates 8.1, 8.2, and 8.5 are author-confirmed and integrated in r12 (section 109A). The remaining one-at-a-time sequence, in the standing dependency order, is:
++
++1. Candidate 7.1, proposal-bound governance decision.
++2. Candidate 7.3, bypass-complete control claim.
++3. Runtime claim binding successor admission.
++4. Claim-bounded functional mediation successor admission.
++5. Restricted-evidence admissibility successor admission.
++6. Verification scope and composition ceiling successor admission.
++7. Candidate 8.4 substrate-profile acceptance criteria.
++8. Candidate 8.3 materiality-threshold evaluation.
++9. Candidates 8.6 through 8.9 in dependency order established by the earlier passes.
+ 
+-1. Candidate 8.1, bonded-root qualification and delegation.
+-2. Candidate 8.2, stated normative stance and status separation.
+-3. Candidate 8.5, contribution-class governance.
+-4. Candidate 7.1, proposal-bound governance decision.
+-5. Candidate 7.3, bypass-complete control claim.
+-6. Runtime claim binding successor admission.
+-7. Claim-bounded functional mediation successor admission.
+-8. Restricted-evidence admissibility successor admission.
+-9. Verification scope and composition ceiling successor admission.
+-10. Candidate 8.4 substrate-profile acceptance criteria.
+-11. Candidate 8.3 materiality-threshold evaluation.
+-12. Candidates 8.6 through 8.9 in dependency order established by the earlier passes.
++The next one-at-a-time pass is Candidate 7.1. The standing r11 order places 7.1 and 7.3 ahead of successor and substrate-profile work; that order governs. (An earlier delivery note naming 8.4 as next is superseded by this recorded order.)
+ 
+ The order resolves foundational objects and claim authority before admission of dependent evidence and mediation rules. It does not imply outcome.
+ 
++### 111A. r12 construction-question status
++
++The following r11 construction questions (section 112) are resolved by the r12-integrated candidates and are retained as historical r11 content, not current open questions: question 1 (multi-root vs composite), 2 (composite-principal evidence), and 3 (different-principal result) are resolved by Candidate 8.1 (section 109A.1); question 4 (burden rationale) and 5 (bound-status vs liability wording) by Candidate 8.2 (section 109A.2); question 7 (class-selection procedure) by Candidate 8.5 (section 109A.3). Questions 6, 8, 9, 10, 11, and 12 remain open and are carried by their respective candidates (8.3, 8.4, 8.7, 8.8, 8.9). Sections 112 and 113 below are preserved verbatim as the r11 historical record.
++
+ ### 112. r11 construction questions
+ 
+ 1. Can one machine-initiated action have several bonded roots, or must legitimate multi-party delegation be represented through several traversals or a composite principal?
