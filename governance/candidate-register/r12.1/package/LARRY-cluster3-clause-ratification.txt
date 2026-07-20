@@ -1,0 +1,72 @@
+Clause 1: amend and ratify
+
+The proposed clause is directionally right, but “absent that evidence, different principals and closure failure” is too strong. Missing evidence cannot establish principal difference.
+
+Also, if a constituent is acting representationally and the obligation remains with the composite, the constituent is not the terminal root for that path. It is an intermediary representative.
+
+Use this exact wording:
+
+Composite same-principal qualification
+
+Same-principal termination is established by terminal-principal identity at the incident resolution, not by membership overlap, shared ownership, common control, organizational affiliation, employment relationship, or a common human endpoint.
+
+A composite principal may qualify as one bonded root only where independently supported evidence establishes the collective’s identity, decision rule, authority-bearing capacity, accountability-bearing capacity, and continuity over the relevant interval.
+
+Where one path appears to terminate at the composite principal and the other at a constituent, same-principal termination is established only where independently supported evidence shows that the constituent endpoint is representational rather than terminal and that the relevant authority or accountability obligation remains vested in the composite principal.
+
+Where independently supported evidence establishes that the constituent and composite are distinct terminal principals, authority-accountability closure fails. Where terminal-principal identity or representative capacity cannot be established or excluded, closure is unresolved.
+
+An action is classified as orphaned only where different terminal principals are established. Unresolved closure is recorded separately and cannot satisfy the first invariant. Neither closure failure nor unresolved closure is repaired by shared membership, ownership, control, affiliation, employment, or a shared human endpoint.
+
+Ratified choices
+Identity is compared, not membership.
+A composite may qualify as one principal.
+Representation can show that an apparent constituent endpoint is not actually terminal.
+Established principal difference produces closure failure.
+Missing evidence produces unresolved closure, not a factual finding of different principals.
+“Orphaned” is reserved for established closure failure.
+Clause 2: confirm with wording repair
+
+The substantive decision is confirmed. Replace “is not inferred from” with “is not established solely by.” Several listed facts may be relevant evidence, but none is independently sufficient.
+
+Use:
+
+Human and institutional termination
+
+A terminal bonded root may be a natural person, legal entity, institution, or defined collective that satisfies the applicable composite-principal qualification.
+
+The MICRM core does not require that a bonded root ultimately terminate at a human principal. A legal, regulatory, contractual, safety, or sector-specific overlay may impose an ultimate-human-responsibility requirement; the core does not.
+
+The root’s principal type, identity, authority-bearing capacity, accountability-bearing capacity, and applicable decision or representation rules must be established by independently supported evidence at the incident’s selected resolution.
+
+Principal identity is not established solely by a technical identifier, ownership relation, product label, organizational affiliation, employment or agency relationship, or trace to a human participant. A declaration of principal type is evidence but is not sufficient by itself.
+
+This preserves non-human terminal roots without allowing a corporation, committee, service account, product, or named organization to become a bonded root merely because someone labels it one.
+
+Clause 3: confirm with one addition
+
+The proposed linkage is correct but incomplete. Investigative-frame authority may choose resolution, but it cannot manufacture principal identity or silently discard evidence-compatible alternative resolutions.
+
+Use:
+
+Investigative-frame linkage for root resolution
+
+The resolution at which terminal-principal identity, composite-principal qualification, and authority-accountability closure are evaluated is an investigative-frame selection.
+
+The selecting authority, authority source, chosen resolution, relevant inclusions and exclusions, and any dark surface created by that selection are recorded under investigative-frame authority governance.
+
+Investigative-frame authority may select the resolution at which the claim is evaluated. It cannot establish principal identity by declaration, convert membership or affiliation into identity, or suppress an evidence-compatible alternative resolution.
+
+Where two or more admissible evidence-compatible resolutions produce different bonded-root or closure findings, the resolution fork is retained and any dependent accountability exit remains unresolved. Where the result is invariant across every admissible resolution, resolution uncertainty does not block that result.
+
+Final status for r12
+Composite same-principal qualification:
+  Ratified as amended
+
+Human and institutional termination:
+  Ratified as amended
+
+Investigative-frame linkage:
+  Ratified with alternative-resolution and invariance clauses
+
+These clauses are ready to enter r12 verbatim. No reconstruction or paraphrase is needed during integration.

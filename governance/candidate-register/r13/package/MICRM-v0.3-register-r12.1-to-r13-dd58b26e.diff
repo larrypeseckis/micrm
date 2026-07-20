@@ -1,0 +1,110 @@
+--- r122pkg/MICRM-v0.3-candidate-register-r12.1-666e744e.md	2026-07-19 14:49:52.251230175 +0000
++++ MICRM-v0.3-candidate-register-r13-dd58b26e.md	2026-07-20 14:27:49.470039445 +0000
+@@ -5,7 +5,8 @@
+ *Canonical base: MICRM-v0.2, SHA-256 `4180eaefa0369811262b805d189b3c572c8305d107bed6b84dd12c685650b0e2`*  
+ *Canonicalization commit: `bfbf1922164648244216030c849cde58dc731539`*  
+ *Register date: 2026-07-19*  
+-*Register revision: r12.1 | Prior register SHA-256 `ad4ec23ea9b12ebf318a1fa770686a7d36755595b939d840dad6d0456110a589` (r11); intermediate r12 SHA-256 `e9d11941dbb662d0061f3192508b6dd7d42243a3f12d8647aee4d4abd368cee1`*  
++*Register revision: r13 | Prior register SHA-256 `666e744e9e25795330b72ee3ef037f3884695586d7433bf444d66533fcc1a528` (r12.1)*  
++*r13 is a register-only Cluster 7 integration revision. It records the final closures of Candidates 7.1 and 7.3, supersedes frozen 7.1, reclassifies frozen 7.3, adds their integration-ready successors, preserves 7.2, registers the deferred Bypass-complete enforcement set candidate, and closes Cluster 7. It does not alter canonical MICRM-v0.2, create a named v0.3 draft, draft-admit any result, reopen 7.1 or 7.3, evaluate the enforcement-set candidate, or absorb conformance material into the accountability core.*  
+ *r12 integrated author-confirmed results for Candidates 8.1 (bonded-root qualification and delegation), 8.2 (stated normative stance and status separation), and 8.5 (contribution-class governance). r12.1 applied exactness and self-consistency repairs (clause apostrophe restoration, 8.5 seam characterization, sequence and construction-status correction, and this metadata pass). Wording for the foundational cluster-3 clauses is carried verbatim from Larry Peseckis's ratification (LARRY-cluster3-clause-ratification.txt, SHA-256 `ad7eda95f5e7aa58479f70f1f90146a6c61c2ae8dc278328fb11ecae807cfb95`; exact-verbatim verification depends on that artifact, delivered in the r12 source package and included by reference). No canonical or named-draft effect.*  
+ 
+ > This file does not modify MICRM-v0.2. It records candidate architecture for later review and ratification.
+@@ -2956,6 +2957,8 @@
+ 
+ ### 81. Candidate proposition 7.1: proposal-bound governance decision
+ 
++> **r13 closure (see section 86A):** Frozen proposition 7.1 is SUPERSEDED. Its negative-confinement content is already produced by canonical v0.2 (line 464 per-event Gate-evaluation-and-Actuation-linkage plus burden) and its "exact proposed action" wording overconstrains bounded-set authorizations. The successor "Governance-decision binding scope and proposal-to-Actuation correspondence" is integration-ready core operational apparatus. The frozen text below is preserved as historical candidate content. Author disposition: Larry Peseckis, 2026-07-19 (artifact 2daa0050).
++
+ A governance decision applies only to the exact proposed transition or action identity to which it was bound.
+ 
+ The binding record should identify, at the resolution required for the selected consequence:
+@@ -3032,6 +3035,8 @@
+ **Closure state:** Integration-ready. This proposition is not draft-admitted or canonical. Exact integration into a named future draft, integrated review, exact-byte author ratification, and repository canonicalization remain required.
+ ### 83. Candidate proposition 7.3: bypass-complete control claim
+ 
++> **r13 closure (see section 86A):** Frozen proposition 7.3 is classified as a CONFORMANCE OR ASSURANCE CLAIM WITH RECORD, not a new accountability invariant, core proposition, or root-exit condition. Canonical accountability evaluates incident-ancestor paths; 7.3 evaluates a bounded architectural capable-path universe, and a proven-unused capable bypass may defeat non-bypassability while remaining absent from the incident run graph. The supporting bypass-surface apparatus is integration-ready conformance/assurance apparatus, NOT core operational. The control-set extension is registered separately as the deferred Bypass-complete enforcement set candidate. The frozen text below is preserved as historical candidate content. Author disposition: Larry Peseckis, 2026-07-20 (artifact 57150b45).
++
+ A control is non-bypassable for a selected consequence only when independently supported evidence establishes that every evidence-compatible path capable of producing the relevant Actuation must pass through the control or an accountability-equivalent control.
+ 
+ The bypass analysis must include, where relevant:
+@@ -3639,6 +3644,39 @@
+ 
+ The Candidate 8.5 closure evaluation was produced with byte identity SHA-256 `3d4b4ca54735209a6c734ccb09b9c105e703cfbe05a59ca3af62e61e8e1a292a` (verified in the producing runtime and its staged output). The reviewing runtime reported reviewing bytes SHA-256 `2795466cc8ecffdeb53ae8bf8efde5ee82de6295e64a5d020806ae8f7995c4c5`. These are not equal. A transformation occurred somewhere in the delivery path between production and review. The transformation has since been characterized: markdown headings and emphasis were stripped, blank lines, list markers, and a blockquote marker were collapsed or removed, line endings were changed to CRLF, and the fenced-code language marker was omitted, while the substantive prose was unchanged after formatting normalization. The reviewer has now reviewed the original `3d4b4ca5` bytes directly and confirms the 8.5 disposition is unchanged. Status: characterized presentation transformation; byte identity unequal; substantive review confirmed against original `3d4b4ca5` bytes. This record does not attribute fault and does not claim byte equivalence.
+ 
++### 86A. Cluster 7 closure record (r13 integration)
++
++*This section records the final closure of Cluster 7. Evaluator, reviewer, corrected-disposition, and author states are preserved separately; the author disposition controls the register result. Source artifacts are cited by exact SHA-256. Canonical MICRM-v0.2 (4180eaef) is unchanged.*
++
++#### 86A.1 Candidate 7.1 (proposal-bound governance decision) — final closure
++
++- **Frozen 7.1 disposition:** Superseded.
++- **Successor:** Governance-decision binding scope and proposal-to-Actuation correspondence. **Integration-ready core operational apparatus.**
++- **Successor content:** binding scope is a single action instance or a bounded action set over consequence-relevant dimensions, stated claim-relatively; an Actuation is governed only where it is the instance or a bounded-set member identified by the decision's binding scope, with per-event Gate-to-Actuation linkage (v0.2 line 464); a transformed action is governed only where it still falls within binding scope on every consequence-relevant dimension; a run-level relational record spans proposal, decision-and-scope, Gate, transformations, and Actuation.
++- **State chain (all 2026-07-19):** evaluator artifact `bc80d69b4aa3d976eef53a9803e6894b45f103f22cd307944a33bd33d76ed7e2` (recommendation core spine refinement, OVERTURNED); reviewer response `9232c3b1ebb2ca98a5c010ef7163e1b225d02768292014148748cc6f8c11bc49` (Superseded; successor core operational); corrected disposition `3be8debb229e64419f96a9d76182a6bcf08cd42883f507ba0865d652eb39fdb3`; author disposition `2daa005048ed146353b278cbcd48f7749569ff4ef071f7d0fa5346fccd0ef9d7`.
++- **Final closure package:** `a06dc4e7204c21069a887a5a22ca250347d6bbcfdfebd9b875df7e8c9861b21d`.
++
++#### 86A.2 Candidate 7.2 (Gate-to-Actuation validity continuity) — preserved
++
++- **Disposition:** Integration-ready core spine candidate. Preserved unchanged through r13; carried forward for named-draft integration. Authoritative candidate schema at section 82.
++
++#### 86A.3 Candidate 7.3 (bypass-complete control claim) — final closure
++
++- **Frozen 7.3 disposition:** Conformance or assurance claim with record. Not a new accountability invariant, core proposition, or root-exit condition.
++- **Rationale of record (reviewer-corrected):** canonical accountability evaluates the incident run graph's ancestor paths; 7.3 evaluates a bounded architectural set of paths capable of reaching the Actuation. A capable bypass proven unused in the incident may defeat non-bypassability while remaining absent from the incident ancestor set; the two findings diverge. (The evaluator's original same-path-set rationale was overturned.)
++- **Supporting apparatus:** bypass-surface record, capable-vs-ancestor path separation, actual-bypass-use findings, named-control coverage, claim-relative dark-surface treatment, and the eight-dimension accountability-equivalent-control test. **Integration-ready conformance/assurance apparatus, NOT core operational.** Core-evidence reuse does not move the positive non-bypassability predicate into the accountability core.
++- **State chain (all 2026-07-20):** evaluator artifact `e9229b2e7cafa918f094c11ad6d8839f56d9482caba2b6349eacbbe2a3539b77` (classification survives; same-path-set rationale OVERTURNED); reviewer response `022c94d000e0ba0ebc19096de518c1cea9593b1a2a718b1eb5e496d3669d3992` (classification confirmed; rationale corrected; successor narrowed; control-set split); corrected disposition `9933b78f3215b5ed419de1888fffc7d0d9c7fe7e8cdd7afb4c333251af4c43b2`; author disposition `57150b45a57c3b86cb44363889702c3899a4db8443b496ce246ee7fa1fa68bd0`.
++- **Final closure package:** `c750e39975cc3316d4d53471b8868160942714330703b92cd8612c3c3f772a7a`.
++
++#### 86A.4 Bypass-complete enforcement set — registered, non-blocking, deferred
++
++- A distributed architecture may produce individually bypassable controls whose set is bypass-complete (every capable path crosses at least one qualifying member). This is a separate conformance object requiring explicit member qualification, path-coverage, coverage-union, and unresolved-path findings (the cluster-6 65.7/65.9 coverage-of-set shape at the control-set level).
++- **Status:** Registered as a separate conformance candidate. **Non-blocking.** Not admitted, not classified integration-ready, not a v0.3 release blocker. Its closure pass is deferred until after Verification scope and composition ceiling and Candidate 8.4 substrate profiles.
++
++#### 86A.5 Cluster 7 status
++
++Cluster 7 is CLOSED. Four dispositions recorded (7.1 Superseded + core-operational successor; 7.2 core spine candidate; 7.3 conformance claim + conformance apparatus; enforcement-set registered/deferred). No conformance material is absorbed into the accountability core. No named v0.3 draft is created and no result is draft-admitted by this section.
++
+ ### 110. v0.3 release-gate classification
+ 
+ The following are release blockers before creation of a named non-canonical MICRM-v0.3 draft:
+@@ -3653,7 +3691,7 @@
+ | Gate-to-Actuation validity continuity | Already integration-ready; preserve through draft integration |
+ | Investigative-frame authority | Exact candidate text and record integration prepared |
+ | Claim-bounded functional mediation | Exact successor wording and record burden prepared |
+-| Cluster 7 candidates 7.1 and 7.3 | One-at-a-time closure completed |
++| Cluster 7 candidates 7.1 and 7.3 | CLOSED (r13 section 86A); 7.1 Superseded + core-operational successor; 7.3 conformance claim + conformance apparatus; 7.2 preserved core spine candidate |
+ 
+ The following require evaluation before the named draft but are not predetermined admissions:
+ 
+@@ -3669,19 +3707,19 @@
+ 
+ The r10 Section 95 closure order is complete and superseded.
+ 
+-Candidates 8.1, 8.2, and 8.5 are author-confirmed and integrated in r12 (section 109A). The remaining one-at-a-time sequence, in the standing dependency order, is:
++Candidates 8.1, 8.2, and 8.5 are author-confirmed and integrated in r12 (section 109A). Cluster 7 (7.1, 7.2, 7.3) is closed and integrated in r13 (section 86A). The remaining one-at-a-time sequence, in the standing dependency order, is:
++
++1. Runtime claim binding successor admission.
++2. Claim-bounded functional mediation successor admission.
++3. Restricted-evidence admissibility successor admission.
++4. Verification scope and composition ceiling successor admission.
++5. Candidate 8.4 substrate-profile acceptance criteria.
++6. Candidate 8.3 materiality-threshold evaluation.
++7. Candidates 8.6 through 8.9 in dependency order established by the earlier passes.
+ 
+-1. Candidate 7.1, proposal-bound governance decision.
+-2. Candidate 7.3, bypass-complete control claim.
+-3. Runtime claim binding successor admission.
+-4. Claim-bounded functional mediation successor admission.
+-5. Restricted-evidence admissibility successor admission.
+-6. Verification scope and composition ceiling successor admission.
+-7. Candidate 8.4 substrate-profile acceptance criteria.
+-8. Candidate 8.3 materiality-threshold evaluation.
+-9. Candidates 8.6 through 8.9 in dependency order established by the earlier passes.
++The Bypass-complete enforcement set candidate (section 86A.4) is dormant and re-enters the sequence only after items 4 (verification scope and composition ceiling) and 5 (substrate profiles) are complete.
+ 
+-The next one-at-a-time pass is Candidate 7.1. The standing r11 order places 7.1 and 7.3 ahead of successor and substrate-profile work; that order governs. (An earlier delivery note naming 8.4 as next is superseded by this recorded order.)
++The next one-at-a-time pass is Runtime claim binding successor admission.
+ 
+ The order resolves foundational objects and claim authority before admission of dependent evidence and mediation rules. It does not imply outcome.
+ 

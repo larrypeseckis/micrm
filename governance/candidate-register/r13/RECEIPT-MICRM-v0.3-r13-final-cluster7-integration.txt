@@ -1,0 +1,13 @@
+MICRM package receipt
+package name: MICRM-v0.3-r13-final-cluster7-integration
+package file: MICRM-v0.3-r13-final-cluster7-integration.zip
+package SHA-256: c7a2e6fb7d134c53ef57ed8ac080ee330423d3a11efca20ea7b76585f7e14993
+manifest file: SHA256SUMS-MICRM-v0.3-r13-final-cluster7-integration.txt
+manifest SHA-256: 00aa9e54faa277b525bf7a63e259277dc868da45b6c80b97c31370094629f3e1
+verification record: VERIFICATION-r13-final.txt
+verification-record SHA-256: 8282991e35af5f37bb9335bb5465a537ce5c8e81034a2b1e299d211b6a84fd9b
+archive entries (derived and verified): 7
+manifested entries (derived and verified): 6
+manifest excludes itself: yes
+verification template packaged: no
+receipt packaged: no

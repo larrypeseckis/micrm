@@ -1,0 +1,43 @@
+MICRM candidate register r13 — Cluster 7 integration — verification record
+Prepared: 2026-07-20 (America/Denver)
+
+Contents: 6 manifested files (7 archive entries including the manifest).
+Manifest: SHA256SUMS-MICRM-v0.3-r13-final-cluster7-integration.txt. Package: MICRM-v0.3-r13-final-cluster7-integration.zip.
+The manifest lists every packaged file except itself. Manifest and package hashes are in the detached receipt.
+
+r13 is a register-only Cluster 7 integration revision. This is r13 FINAL; it repairs one truncated source-hash citation (7.1 corrected disposition expanded to full SHA-256 3be8debb229e64419f96a9d76182a6bcf08cd42883f507ba0865d652eb39fdb3) from the substantively-accepted r13 draft 242297c7. No disposition, wording, sequence, gate, or provenance relationship changed.
+
+Byte states:
+  prior register r12.1: 666e744e9e25795330b72ee3ef037f3884695586d7433bf444d66533fcc1a528
+  r13 FINAL register:         dd58b26ed72abb103a53aa5e4e4d9853f756892cdf23ccc6614c8445ec01da8a
+  r12.1 -> r13 diff:    1a37ce64d2289bee91b25d99af7e44d1f4fa19c56c3098c00a347f022fa2d098
+
+Round trip (verified):
+  r12.1 + (r12.1->r13 diff) -> dd58b26e : PASS
+  r13 - (r12.1->r13 diff) -> 666e744e : PASS
+
+r13 scope (what changed):
+  - header bumped r12.1 -> r13 with register-only integration note;
+  - section 81 (frozen 7.1): in-place SUPERSEDED note, frozen text preserved;
+  - section 83 (frozen 7.3): in-place CONFORMANCE-CLAIM reclassification note, frozen text preserved;
+  - new section 86A: Cluster 7 closure record with per-candidate state chains and source hashes
+    (7.1 Superseded + core-operational successor; 7.2 preserved core spine candidate;
+     7.3 conformance claim + conformance apparatus; Bypass-complete enforcement set registered/deferred;
+     Cluster 7 CLOSED);
+  - section 110 release-gate: Cluster 7 row updated to CLOSED;
+  - section 111 closure order: Cluster 7 removed, next pass = Runtime claim binding successor admission.
+
+r13 scope guards (verified):
+  - canonical MICRM-v0.2 (4180eaef) unchanged;
+  - no named v0.3 draft created;
+  - no result draft-admitted;
+  - frozen 7.1 and 7.3 text preserved, not reopened;
+  - enforcement-set candidate registered but not evaluated;
+  - no conformance material absorbed into the accountability core.
+
+Included source-chain artifacts (final closure packages, not reconstructed summaries):
+  7.1 final closure package: a06dc4e7204c21069a887a5a22ca250347d6bbcfdfebd9b875df7e8c9861b21d
+  7.3 final closure package: c750e39975cc3316d4d53471b8868160942714330703b92cd8612c3c3f772a7a
+  7.3 author disposition:    57150b45a57c3b86cb44363889702c3899a4db8443b496ce246ee7fa1fa68bd0
+
+Declared external invariant: canonical MICRM-v0.2 4180eaef (unchanged).

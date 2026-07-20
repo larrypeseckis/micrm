@@ -1,0 +1,56 @@
+MICRM r12.1 final (metadata repair) — verification record
+Prepared: 2026-07-18 (America/Denver)
+
+This is the final r12.1 register state. It supersedes the r12.1 draft 7003ceab, which
+passed content review but carried metadata self-consistency defects. r12.1 integrates
+author-confirmed Candidates 8.1, 8.2, and 8.5 and applies all exactness and metadata
+repairs. No disposition or normative clause changed at this step. No canonical or
+named-draft effect.
+
+Byte states:
+  r11 register:            ad4ec23ea9b12ebf318a1fa770686a7d36755595b939d840dad6d0456110a589
+  r12 register (interim):  e9d11941dbb662d0061f3192508b6dd7d42243a3f12d8647aee4d4abd368cee1
+  r12.1 draft (superseded): 7003ceab1e747bfb5b7520b4a13a18d98953f0909acafb762aafadf58e8899fd
+  r12.1 final register:    666e744e9e25795330b72ee3ef037f3884695586d7433bf444d66533fcc1a528
+  r11 -> r12.1-final diff: see manifest
+
+Round trip:
+  r11 + (r11->r12.1-final diff) -> 666e744e : PASS
+  r12.1-final - (r11->r12.1-final diff) -> ad4ec23e : PASS
+
+Package contents (5 substantive files + this verification record + manifest = 7 archive entries):
+  MICRM-v0.3-candidate-register-r12.1-666e744e.md   (final register)
+  MICRM-v0.3-register-r11-to-r12.1-666e744e.diff    (exact diff from r11)
+  LARRY-cluster3-clause-ratification.txt            (cluster-3 ratified source; standalone chain)
+  MICRM-8.2-author-stance-declaration-8d72096a.md   (8.2 stance source)
+  MICRM-8.5-class-governance-closure-evaluation-3d4b4ca5.md (8.5 original evaluator bytes)
+  VERIFICATION-r12.1-final.txt                      (this record)
+  SHA256SUMS-r12.1-final.txt                        (manifest; lists 6 files, excludes itself)
+The manifest lists every file except itself: 6 manifested entries; sha256sum -c passes 6 of 6.
+
+Metadata repairs applied at this step (vs the 7003ceab draft):
+  1  Verification package count corrected. This package has 7 archive entries
+     (5 substantive files + verification record + manifest), 6 manifested.
+  2  Register header revision identifier corrected from r12 to r12.1, with the
+     r12 -> r12.1 repair history stated in the header.
+  3  Section 109A.4 heading corrected from "unresolved transformation" to
+     "characterized presentation transformation" to match its body.
+  4  Section 109A.2 now cites the 8.2 stance-declaration artifact 8d72096a and its
+     hash beside "The author stance declaration is confirmed."
+  5  Standalone source chain: LARRY-cluster3-clause-ratification.txt
+     (SHA-256 ad7eda95f5e7aa58479f70f1f90146a6c61c2ae8dc278328fb11ecae807cfb95)
+     is included in this package, so exact-verbatim verification of the cluster-3
+     clauses no longer depends on the separately delivered r12 source package.
+  Also: the 8.5 seam characterization now includes blockquote-marker removal per
+     reviewer note.
+
+Content-bearing repairs (carried from the 7003ceab draft, unchanged):
+  - three cluster-3 clause instances carry the exact U+2019 apostrophes from the
+    ratified source; the two pre-existing straight-apostrophe instances elsewhere
+    were not claimed verbatim and remain unchanged;
+  - 8.5 delivery seam characterized and substantively confirmed against 3d4b4ca5;
+  - section 111 sequence: next pass 7.1, then 7.3, standing r11 order governs;
+  - section 111A records resolved-vs-open r11 construction questions.
+
+Declared external invariant: canonical MICRM-v0.2
+  4180eaefa0369811262b805d189b3c572c8305d107bed6b84dd12c685650b0e2 (unchanged).

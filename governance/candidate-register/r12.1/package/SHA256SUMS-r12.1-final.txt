@@ -1,0 +1,6 @@
+666e744e9e25795330b72ee3ef037f3884695586d7433bf444d66533fcc1a528  MICRM-v0.3-candidate-register-r12.1-666e744e.md
+a3be35b37777ce21d573dad8c492454975e5bb3ff87aadc8cff6b73cdf5eb8e1  MICRM-v0.3-register-r11-to-r12.1-666e744e.diff
+ad7eda95f5e7aa58479f70f1f90146a6c61c2ae8dc278328fb11ecae807cfb95  LARRY-cluster3-clause-ratification.txt
+8d72096a36cb30bbfcf21956b9b61d3f2a1cf3869092451f9f11a053c5cc77dd  MICRM-8.2-author-stance-declaration-8d72096a.md
+3d4b4ca54735209a6c734ccb09b9c105e703cfbe05a59ca3af62e61e8e1a292a  MICRM-8.5-class-governance-closure-evaluation-3d4b4ca5.md
+cd1888a9f37e7660e362baba440cde11785d28bedbe2577847836088cdec7302  VERIFICATION-r12.1-final.txt
