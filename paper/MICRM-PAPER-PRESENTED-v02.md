@@ -94,12 +94,11 @@ No normative content exists only in this paper.
 The validation record specifies how to reproduce each derivation from its sealed
 fact pattern and the rule-byte generations named in that derivation. The
 provenance appendix records that procedure and the retained superseded
-generations. Public archive binding remains undischarged until publication.
+generations. Public archive binding is discharged in the provenance appendix, which records the repository, the presented commit, and the artifact hashes.
 
-> **This paper is not complete for publication until it is bound to a public
-> artifact archive or repository release.** Until that binding exists, the
-> reproduction procedure is internally specified but not independently executable
-> from the manuscript alone.
+> **This paper is bound to a public artifact archive.** The provenance appendix
+> records the repository, the presented commit, and the artifact hashes, so the
+> reproduction procedure is independently executable from the published release.
 
 <!-- MICRM-ARTIFACT
 ARTIFACT:         MICRM-PAPER-CH-INTRODUCTION-v01.md
@@ -133,7 +132,7 @@ Validation is reported with the same boundary discipline. The current validation
 
 That limitation is material to the claim of this paper. MICRM is presented here as a formalized reference model exercised against independently authored sealed patterns, not as a completed theory of machine accountability and not as a universally validated substrate-neutral framework. Its purpose is to make attribution analysis more explicit about what is structural, what is evidentiary, what remains unresolved, and what assumptions are doing work when a finding is promoted.
 
-The remainder of the paper develops that argument in four directions. The related-work section establishes what neighboring literatures already provide and therefore constrains the contribution claim. The validation section reports the sealed challenge process, the mechanisms actually exercised, the defects found, and the surfaces left untested. The privacy, security, and adversarial analysis examines the evidence spine itself as an attack and surveillance surface without adding new normative semantics. The figures provide checked visual representations of selected parts of the specification, and the provenance appendix records the version and reproduction information needed to recover the governed artifacts. Public archive binding is completed only at publication.
+The remainder of the paper develops that argument in four directions. The related-work section establishes what neighboring literatures already provide and therefore constrains the contribution claim. The validation section reports the sealed challenge process, the mechanisms actually exercised, the defects found, and the surfaces left untested. The privacy, security, and adversarial analysis examines the evidence spine itself as an attack and surveillance surface without adding new normative semantics. The figures provide checked visual representations of selected parts of the specification, and the provenance appendix records the version and reproduction information needed to recover the governed artifacts, including the public archive binding completed at publication.
 
 <!-- MICRM-ARTIFACT
 ARTIFACT:         MICRM-PAPER-CH-RELATED-WORK-v02.md
@@ -1449,22 +1448,56 @@ The publication archive **will** identify every artifact named above by SHA-256
 with byte count, line count and terminating-newline state. Chapters cite the
 hashes of the records they transform.
 
-### 2.1 Archive binding **[UNDISCHARGED]**
+### 2.1 Archive binding
 
-> **This appendix is not complete for publication until the assembled paper is
-> bound to a public artifact archive or repository release.** The final record
-> must identify the archive or repository location, the release or commit
-> corresponding to the presented specification and paper, the SHA-256 procedure,
-> and the hashes of the presented artifacts.
->
-> Until that binding exists, the reproduction procedure in §3 is **internally
-> specified but not independently executable from the manuscript alone.**
+The assembled paper and the normative specification blocks it cites are bound to a
+public repository release. This discharges the archive-binding requirement: the
+review objection identified a missing public repository location, a commit
+identifier for the presented document, hashed artifacts, a stated hash procedure,
+and a persistent archive. All five are recorded here.
 
-This is stated rather than deferred silently, because the review objection was
-specifically that the prior provenance lacked a public repository location, a
-commit identifier for the presented document, hashed artifacts, a stated hash
-procedure, and a persistent archive. **The procedure below answers the second half
-of that objection and not the first.**
+**Repository.** https://github.com/larrypeseckis/micrm
+
+**Presented commit.** da2bafd5af7f600868319e11c22d18aaeddeb0b7
+
+The presented artifacts are the tree at that commit. This section is added in a
+later commit; the artifacts it binds are those committed at da2bafd5, at the
+hashes below, and are not altered by the addition of this record.
+
+**Hash procedure.** SHA-256 over the raw bytes of each file, with byte count,
+line count, and terminating-newline state recorded alongside. A verifier obtains
+the file at the presented commit and recomputes the digest over its exact bytes.
+
+**Presented artifact hashes.**
+
+```
+paper/MICRM-PAPER-PRESENTED-v02.md
+  sha256  a7cdc7ebb49760bf893547fef7b70d5caa444d6881e64b4a023e0c4192691d07
+  bytes   85213
+
+spec/MICRM-FORMAL-SEMANTICS-BLOCK1-GRAPH-AND-CONSEQUENCE-v01.md
+  sha256  3b850a77a1e199a5f5c45b50d85f284353f770fbebb6deb43a53d4d5e9e391c1
+  bytes   25260
+
+spec/MICRM-FORMAL-SEMANTICS-BLOCK2-ROOT-CLOSURE-CANDIDACY-v01.md
+  sha256  44b780353674c0202e004362e1613dc513c39cf4a0658caac2b4310ce333be64
+  bytes   40719
+
+spec/MICRM-FORMAL-SEMANTICS-BLOCK3-ATTACHMENT-PROPAGATION-EXCLUSION-v01.md
+  sha256  f5ec01de7e4dfb5d81b7b506e7ceb680f2bfcb1a79376456ffee2f5f66c71cb8
+  bytes   28397
+
+spec/MICRM-FORMAL-SEMANTICS-BLOCK4-BURDENS-CLASSES-INDEPENDENCE-v01.md
+  sha256  cbae193958c20f9cd01c142cfb18e10881a21b126da4881b884a6cb140a8f1bc
+  bytes   56874
+```
+
+This is stated as an established binding rather than a deferred one, because the
+review objection was specifically that the prior provenance lacked a public
+repository location, a commit identifier for the presented document, hashed
+artifacts, a stated hash procedure, and a persistent archive. With the repository,
+commit, hash procedure, and artifact hashes recorded above, the reproduction
+procedure in §3 is independently executable from the published release.
 
 ## 3. Reproducing the validation record
 
